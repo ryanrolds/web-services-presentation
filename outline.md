@@ -40,6 +40,6 @@ Personal projects and playing around with the services.
 
 ## Why not? Cons
 
-## How does one learn
+## What next?
 
 ## Thanks
