@@ -1,5 +1,9 @@
 # SOA-presentation
 
-# Build and run
+## Build and run
 
     $ make
+
+Then open index.html in your browser.
+
+
