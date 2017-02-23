@@ -1,6 +1,8 @@
 files = header.html\
-        outline.md\
-        footer.html
+	presentation.md\
+	footer.html
+
+all: index.html
 
 index.html: ${files}
-    cat > $@ $^
+	cat > $@ $^
