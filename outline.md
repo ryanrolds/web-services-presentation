@@ -36,8 +36,6 @@ Many projects grow/scale in to SOA over time
 
 ### Operating Systems
 
-Personal projects and playing around with the services.
-
 ## Why not? Cons
 
 ## What next?
