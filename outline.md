@@ -1,16 +1,24 @@
-B# Service-oriented architecture
+# Service-oriented architecture
 
-## About Ryan Olds (Who)
+## About me
 
-## Web services - How we deliver out content
+* Software engineer / Full-stack developer
+* https://github.com/ryanrolds
+* Works at IRIS Educational Media (until mid-June)
+
+## Web services - How we deliver our content
 
 Initially this was going to be Service oritented architecture. Which is mostly 
-concerned with taking the services we will talking about today and how to organize 
-as well as maintain them. How to phrase in new services and phase out legacy services
-is also key part of SOA. 
+concerned with taking the services we will talking about today and how to organize,
+maintain, and phase in & out new and old services.
 
 After some dicusion it was decided to trim things down. So, we will be talking about
 common services found in non-trivial Web Services.
+
+## Questions & comments
+
+Raise you hand at anytime. If I missed a key point let me know, no sense in people
+leaving this talk misinformed.
 
 ## The base case
 
@@ -23,85 +31,102 @@ users perform on our web pages. The modern trivial case is typically a single we
 capable of running a scripting language sitting on top of a directory containing scripts, 
 HTML, CSS, and JS. 
 
-## And this works, but....
+## And this works initially, but....
 
-## Feature creep
+* More users
+  * 10 concurrent
+  * 100 concurrent
+  * 1000 concurrent
+  * and more....
+* Feature creep
+  * Reporting
+  * Background processes
+  * Monitoring
 
-It's not enough to be able to get and set data for HTTPS requests. People wanted more:
+## Single instance web service
 
-* Reporting
-* Background services
-* Monitoring and notification of events
-* 
+## Web server and DB server
 
-Many of these situations don't fit the request+response model common in the base case.
+## "The Cloud" and scaling
 
-## Syncronous and Asyncronous
+15 years ago sites were hosted on physical servers that had to be maintained the dev team or the companies sys admins. Now scaling does't require weeks of physical prep and setup. 
 
-* 
+## Common problems
 
-## Common services
+* Too much load (CPU)
+* Not enough memory (RAM)
+* Input/Output and disk space
+* Network speed and latency
 
-### Web servers
+## Users interactions need to be fast
 
-Apache, NGINX
+Like really fast, 250ms (1/4th of a second) or less. 
 
-### Data stores
+* DNS lookups
+* Internet latency
+* Handling of the request
+* Size of the response
+* Updating the UI
 
-RDMS (SQL: PostgreSQL, MySQL, MSSQL, Oracle)
+## CDNs (reducing load and improving latency)
 
-### Monitoring & Logging
+The data unique to a particular URL is often quite small (HTML/JSON).
 
-Lots of SaaS monitoring services. Lots of log storage solutions. ELK stack.
+JavaScript, CSS, images are static and can be moved to a Content Delivery Network, reducing latency and load on the web server.
 
-### Messaging
+## Load balancers (scaling the web)
 
-Message Brokers (RabbitMQ, ZeroMQ, Amazon SQS, OS built-in IPC)
+At 100 concurrent users a resposne times will increase. 
 
-Work queue, ensuring that all backend/frontend servers get events.
+Options:
+1) Bigger server
+2) More servers
 
-### Front-end & Backend applications
+## Background process & reporting
 
-Node.js, Python, .NET, really anything that can handle HTTP protocol.
+Things that our system needs to do that is not done as part of fulfilling an in-flight request
 
-Front-end code being served by own service and backend is REST API, access control, sessions
+* Reports
+* Reminders/nudges
+* Additional data processing
 
-### Workers
+## Message Brokers/Queues
 
-A group of services that handle long running task and interact with the backend & frontend servers.
+Allows delayed handling of artitary events in a durable and scalable way. Many ways to configure the broker and queues.
 
-## When do we use these services
+* Work queues (multiple workers dequing from a single queue)
+* Publish/subscribe (each subscriber gets a copy of an event)
+* Message routing
+* RPC
 
-## Example #1 - Selling custom reports
+## Scaling the datastores
 
-Work queue, with a report workers storing reports in S3. Access to reports made through temporary S3 URL.
+Data is hard. Lots of companies trying to solve these problems. Data loss can be company killing.
 
-Diagram
+RDMS/SQL: MySQL, PostgreSQL, MSSQL, Oracle
+NoSQL: MongoDB (document), Redis (key-value), CouchDB (document), Neo4J (graph)
 
-## Example #2 - 
+## Replication (read & write instance)
 
-I would like this example to include a Pub/Sub MQ setup. Some kind of collobrative editor (Google Docs)?
+Spreads the reads and write (more complex) and writes across multiple nodes.
 
-Diagram
+## Sharding / Federation
 
-## Continues to change
+Shading:
+Federation: 
 
-### HTTP/2.0
+## Caching often read data (reducing reads)
 
-### Web Sockets
+In memory caches
 
-### New data stores
-
-* NoSQL (MongoDB, Redis, etc...)
-* Graph database (not commonly used, but super useful with social media)
+## Object stores
 
 ## Where to go from here
 
-Look for librarys for interacting with these various services, install and try them. 
+Look for librarys for interacting with these various services and try them. 
 
-## Challenge
+Lots of great information here: https://github.com/donnemartin/system-design-primer
 
-Try out RabbitMQ or some other message queue. Once a message broker is added a system
-a lot of possibilities open up.
+These slides are available at https://github.com/ryanrolds/web-services-presentation
 
 ## Questions
