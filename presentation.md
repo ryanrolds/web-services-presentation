@@ -1,11 +1,13 @@
+class: middle, center
+
 # Modern Web Services
 ## How we serve up our content
 
 ---
 
-# About me
+class: middle
 
-## Ryan Olds
+# About me
 
 * Software engineer / Full-stack developer
 * ryanrolds@gmail.com
@@ -14,6 +16,8 @@
 
 ---
 
+class: middle
+
 # Transparancy
 
 * This talk was going to be 2 hours
@@ -21,11 +25,15 @@
 
 ---
 
+class: middle, center
+
 # Questions? Comments?
 
 Raise you hand. 
 
 ---
+
+class: middle
 
 # Overview
 
@@ -35,11 +43,11 @@ Raise you hand.
 
 ---
 
-# Single web server
-
 <img src="images/single_server.png"/>
 
 ---
+
+class: middle
 
 # And this work, but...
 
@@ -48,6 +56,8 @@ Raise you hand.
 * Monitoring
 
 ---
+
+class: middle
 
 # Common problems
 
@@ -59,47 +69,39 @@ Raise you hand.
 
 ---
 
+class: middle
+
 # What can we do?
 
 * Improve the performance of our code
 * Scale vertically (larger server)
 * Scale horizontally (more servers)
 
---- 
-
-# CDN
+---
 
 <img src="images/cdn.png"/>
 
 ---
 
-# DB on it's own server
-
 <img src="images/db_server.png"/>
 
 ---
-
-# Load balancers
 
 <img src="images/load_balancer.png"/>
 
 ---
 
-# Scaling the data(base|stores)
-
 <img src="images/db_cluster.png"/>
 
 ---
-
-# Read/write API
 
 <img src="images/read_write_api.png"/>
 
 ---
 
-## Background process & reporting
+class: middle
 
-Sometimes what the user wants to do is just too resource intensive to handle with HTTP.
+# Background processing
 
 * Report generation
 * Importing/exporting data
@@ -107,11 +109,11 @@ Sometimes what the user wants to do is just too resource intensive to handle wit
 
 ---
 
-# Message Brokers/Queues
-
 <img src="images/message_queue.png"/>
 
 ---
+
+class: middle
 
 # What next?
 
@@ -121,9 +123,13 @@ Lots of great information here: https://github.com/donnemartin/system-design-pri
 
 ---
 
+class: middle, center
+
 # Questions?
 
 ---
+
+class: middle, center
 
 # Thanks
 
