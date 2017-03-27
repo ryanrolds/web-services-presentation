@@ -12,16 +12,15 @@ class: middle
 * Software engineer / Full-stack developer
 * ryanrolds@gmail.com
 * https://github.com/ryanrolds
-* Works at IRIS Educational Media (until mid-June)
 
 ---
 
 class: middle
 
-# Transparancy
+# Transparency
 
-* This talk was going to be 2 hours
-* And about much more boring stuff
+* Was going to be 2 hours
+* Much more boring stuff
 
 ---
 
@@ -29,7 +28,7 @@ class: middle, center
 
 # Questions? Comments?
 
-Raise you hand. 
+Raise your hand. 
 
 ---
 
@@ -37,9 +36,9 @@ class: middle
 
 # Overview
 
+* Use a broad definition of content
 * Software commonly found in web services
-* We are going to use a broad definition of content
-* If we move too quick raise your hand tell me to slow down
+* Common patterns when solving scaling issues
 
 ---
 
@@ -51,9 +50,8 @@ class: middle
 
 # And this work, but...
 
-* What happens when we have a 100/1k/10k active users
+* What happens with 100/1k/10k active users
 * Other business units start wanting reports, notifications, etc...
-* Monitoring
 
 ---
 
@@ -74,7 +72,7 @@ class: middle
 # What can we do?
 
 * Improve the performance of our code
-* Scale vertically (larger server)
+* Scale vertically (larger servers)
 * Scale horizontally (more servers)
 
 ---
@@ -117,7 +115,7 @@ class: middle
 
 # What next?
 
-Look for libraries/modules for interacting with these various services and try them.
+Find libraries for interacting with these various services and try them out.
 
 Lots of great information here: https://github.com/donnemartin/system-design-primer
 
@@ -125,13 +123,10 @@ Lots of great information here: https://github.com/donnemartin/system-design-pri
 
 class: middle, center
 
-# Questions?
-
----
-
-class: middle, center
-
 # Thanks
 
-Make sure to come to the next one. 
+AWS Services and Serverless Resources
+
+Friday, April 28, 2017 @ 6:30PM
+
 
