@@ -19,8 +19,8 @@ class: middle
 
 # Transparency
 
-* Was going to be 2 hours
-* Much more boring stuff
+* This talk was going to be 2 hours
+* And about much more boring stuff
 
 ---
 
@@ -48,7 +48,7 @@ class: middle
 
 class: middle
 
-# And this work, but...
+# And this works, but...
 
 * What happens with 100/1k/10k active users
 * Other business units start wanting reports, notifications, etc...
