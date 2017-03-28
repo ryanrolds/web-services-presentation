@@ -71,9 +71,9 @@ class: middle
 
 # What can we do?
 
-* Improve the performance of our code
-* Scale vertically (larger servers)
+* Scale vertically (larger server)
 * Scale horizontally (more servers)
+* Optimize our site
 
 ---
 
@@ -115,7 +115,7 @@ class: middle
 
 # What next?
 
-Find libraries for interacting with these various services and try them out.
+Try setting these services.
 
 Lots of great information here: https://github.com/donnemartin/system-design-primer
 
